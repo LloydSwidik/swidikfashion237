@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>SwidikFashion237 services</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, rgb(240, 38, 240), rgb(108, 205, 244));
+            color: #111;
+            text-align: center;
+         }
+                 header {
+             padding: 20px;
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         }
+         .nav-item{
+             padding-right: 40px;
+             font-weight: bold;
+         }
+         a {
+             text-decoration: none;
+             color: black;
+             font-size: 23px;
+             font-weight: 500;
+         }
+         nav a:hover {
+             color: white;
+         }
+        .logo-section {
+         display: flex;
+        align-items: center;
+        }
+        .logo-img {
+         height: 40px;
+         width: 40px;
+         margin-right: 10px;
+         border-radius: 20px;
+        }
+        .logo-text {
+         font-size: 22px;
+         font-weight: bold;
+        }
+        .category-btn{
+background: white;
+color: #b24be3;
+border: none;
+padding: 10px 20px;
+margin: 10px;
+font-weight: bold;
+cursor: pointer;
+        }
+        .services{
+            display: none;
+            margin-top: 20px;
+        }
+        .grid{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .item{
+            background: white;
+            color: black;
+            margin: 10px;
+            border-radius: 10px;
+            width: 180px;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .item img{
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .item:hover{
+            background-color: #efefef;
+        }
+        .footer {
+            background-color: #1c1f1c;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            padding: 20px 15px;
+            text-align: center;
+           }
+           .footer .logo {
+            height: 30px;
+            margin-bottom: 10px;
+           }
+           .footer .flag {
+            height: 15px;
+            vertical-align: middle;
+            margin-right: 5px;
+           }
+           .footer-top a {
+            color: #c5f202;
+            text-decoration: underline;
+           }
+           .footer-top p {
+            margin: 8px 0;
+           }
+           .footer-links {
+            margin: 15px 0;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           gap: 12px;
+           }
+           .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+           }
+           .footer-links a:hover{
+            color: #c5f202;
+           }
+           .footer-bottom{
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 12px;
+            line-height: 1.5px;
+           }
+           .back-to-top{
+            display: inline-block;
+            margin-top: 10px;
+            color: #fff;
+            background-color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+           }
+           .footer-note{
+            background-color: purple;
+            color: #000;
+            padding: 10px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 13px;
+           }
+          .footer-nav{
+            display: flex;
+            justify-content: space-around;
+            background-color: #111;
+            padding: 12px 0;
+            border-top: 1px solid #333;
+            margin-top: 10px;
+          }
+          .footer-nav a{
+            color: white;
+            font-size: 13px;
+            text-decoration: none;
+            transition: color 0.3s;
+          }
+          .footer-nav a:hover{
+            color: blue;
+          }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <a href="index.html">
+            <img src="images/logo 2.png" alt="Logo" class="logo-img" />
+            <div style="font-family: 'Times New Roman', Times, serif;" class="logo-text">Swidik Fashion237</div>
+    </a>
+</div>
+     <nav>
+        <span class="nav-item"><a href="index.html">Home</a></span>
+        <span class="nav-item"><a href="join.html">Contact</a></span>
+        <span class="nav-item"><a href="about.html">About</a></span>
+     </nav>
+    </header>
+    <h1 style="text-align: center;">Our services</h1>
+   <button class="category-btn" onclick="showCategory('men')">Men Clothes</button>
+   <button class="category-btn" onclick="showCategory('women')">Women Clothes</button>
+   <button class="category-btn" onclick="showCategory('kids')">Kids Clothes</button>
+   <button class="category-btn" onclick="showCategory('gen-z')">Sapology Gen-Z</button>
+   <button class="category-btn" onclick="showCategory('electronics')">Electronic Accesories</button>
+   <button class="category-btn" onclick="showCategory('t-shirts')">T-Shirts</button>
+   <button class="category-btn" onclick="showCategory('pullovers')">Pullovers</button>
+   <button class="category-btn" onclick="showCategory('shoes')">Shoes</button>
+   <button class="category-btn" onclick="showCategory('bags')">Bags</button>
+   <button class="category-btn" onclick="showCategory('caps')">Caps</button>
+   <button class="category-btn" onclick="showCategory('gen-z')">Jewelleries</button>
+   <button class="category-btn" onclick="showCategory('wigs')">Wigs</button>
+   <button class="category-btn" onclick="showCategory('parfumes')">Parfumes</button>
+   <button class="category-btn" onclick="showCategory('slippers')">Slippers</button>
+   <button class="category-btn" onclick="showCategory('sneakers')">Sneakers</button>
+   <button class="category-btn" onclick="showCategory('suits')">Suits</button>
+   <button class="category-btn" onclick="showCategory('jackets')">Jackets</button>
+   <button class="category-btn" onclick="showCategory('boxers')">Boxers</button>
+   <button class="category-btn" onclick="showCategory('stocks')">Stocks</button>
+   <button class="category-btn" onclick="showCategory('singletts')">Singletts</button>
+   <button class="category-btn" onclick="showCategory('underwears')">Underwears</button>
+   <button class="category-btn" onclick="showCategory('vintage')">Vintage Shirts</button>
+   <p>And More...!!!!!!</p>
+</div>
+<div id="suits" class="services grid">
+    <div class="item" onclick="goToWhatsApp('Suits')">
+    <img src="images/suits (2).jpg" alt="Suits">
+    <p>Suits</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Suits')">
+    <img src="images/suits (4).jpg" alt="Suits">
+    <p>Suits</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Suits')">
+    <img src="images/suits (5).jpg" alt="Suits">
+    <p>Suits</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Suits')">
+    <img src="images/suits (10).jpg" alt="Suits">
+    <p>Suits</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Suits')">
+    <img src="images/suit-women.jpg" alt="Suits">
+    <p>Women Suits</p>
+</div>
+</div>
+<div id="vintage" class="services grid">
+    <div class="item" onclick="goToWhatsApp('Vintage Shirts')">
+    <img src="images/vintage shirts (1).jpg" alt="Vintage Shirts">
+    <p>Vintage Shirts</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Vintage Shirts')">
+    <img src="images/vintage shirts (2).jpg" alt="Vintage Shirts">
+    <p>Vintage Shirts</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Vintage Shirts')">
+    <img src="images/vintage shirts (3).jpg" alt="Vintage Shirts">
+    <p>Vintage Shirts</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Vintage Shirts')">
+    <img src="images/vintage shirts (4).jpg" alt="Vintage Shirts">
+    <p>Vintage Shirts</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Vintage Shirts')">
+    <img src="images/vintage shirts (5).jpg" alt="Vintage Shirts">
+    <p>Vintage Shirts</p>
+</div>
+</div>
+<div id="shoes" class="services grid">
+    <div class="item" onclick="goToWhatsApp('Shoes')">
+    <img src="images/gentle2.jpg" alt="Shoes">
+    <p>Shoes</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Shoes')">
+    <img src="images/gentle4.jpg" alt="Shoes">
+    <p>Shoes</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Shoes')">
+    <img src="images/shoe-men3.jpg" alt="Shoes">
+    <p>Shoes</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Shoes')">
+    <img src="images/shoe-men4.jpg" alt="Shoes">
+    <p> Bleu Balenciga Men Shoes</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Shoes')">
+    <img src="images/shoe-men5.jpg" alt="Shoes">
+    <p>Shoes</p>
+</div>
+</div>
+<div id="jackets" class="services grid">
+    <div class="item" onclick="goToWhatsApp('Jackets')">
+    <img src="images/jacket.jpg" alt="Jackets">
+    <p>Jackets</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Jackets')">
+    <img src="images/jacket1.jpg" alt="Jackets">
+    <p>Jackets</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Jackets')">
+    <img src="images/jacket2.jpg" alt="Jackets">
+    <p>Jackets</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Jackets')">
+    <img src="images/jacket3.jpg" alt="Jackets">
+    <p>Jackets</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Jackets')">
+    <img src="images/jacket5.jpg" alt="Jackets">
+    <p>Jackets</p>
+</div>
+</div>
+<div id="sneakers" class="services grid">
+    <div class="item" onclick="goToWhatsApp('Sneakers')">
+    <img src="images/sneakers.jpg" alt="Sneakers">
+    <p>Sneakers</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Sneakers')">
+    <img src="images/sneakers1.jpg" alt="Sneakers">
+    <p>Sneakers</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Sneakers')">
+    <img src="images/sneakers2.jpg" alt="Sneakers">
+    <p>Sneakers</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Sneakers')">
+    <img src="images/sneakers3.jpg" alt="Sneakers">
+    <p>Sneakers</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Sneakers')">
+    <img src="images/sneakers4.jpg" alt="Sneakers">
+    <p>Sneakers</p>
+</div>
+</div>
+<div id="slippers" class="services grid">
+    <div class="item" onclick="goToWhatsApp('Slippers')">
+    <img src="images/slippers.jpg" alt="Slippers">
+    <p>Slippers</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Slippers')">
+    <img src="images/slippers1.jpg" alt="Slippers">
+    <p>Slippers</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Slippers')">
+    <img src="images/slippers3.jpg" alt="Slippers">
+    <p>Slippers</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Slippers')">
+    <img src="images/slippers4.jpg" alt="Slippers">
+    <p>Slippers</p>
+</div>
+<div class="item" onclick="goToWhatsApp('Slippers')">
+    <img src="images/slippers5.jpg" alt="Slippers">
+    <p>Slippers</p>
+</div>
+</div>
+<div id="t-shirts" class="services grid">
+    <div class="item" onclick="goToWhatsApp('T-shirts ')">
+    <img src="images/t-shirt.jpg" alt="T-shirts">
+    <p>T-Shirts</p>
+</div>
+<div class="item" onclick="goToWhatsApp('T-shirt')">
+    <img src="images/t-shirt2.jpg" alt="T-shirt">
+    <p>T-shirt</p>
+</div>
+<div class="item" onclick="goToWhatsApp('T-shirt')">
+    <img src="images/t-shirt3.jpg" alt="T-shirt">
+    <p>T-shirt</p>
+</div>
+<div class="item" onclick="goToWhatsApp('T-shirt')">
+    <img src="images/t-shirt4.jpg" alt="T-shirt">
+    <p>T-shirt</p>
+</div>
+<div class="item" onclick="goToWhatsApp('T-shirt')">
+    <img src="images/t-shirt short armed.jpg" alt="T-shirt">
+    <p>T-shirt short armed</p>
+</div>
+</div>
+<div class="footer-links">
+    <a href="shop-now.html">Shop</a>
+    <a href="join.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="index.html">Home</a>
+</div>
+<div class="footer-bottom">
+    <p>We are happy to have you here</p>
+    <p>Survey our shop to find your interst</p>
+    <p>Join our WhatsApp group/channel to stay updated</p>
+    <a href="#" class="back-to-top">Back to top</a>
+</div>
+<div class="footer-note">
+    <p>Shop from us to augment your fidelity points awards at the end of each year for the most consistent clients</p>
+</div>
+<div class="footer-nav">
+    <a href="shop-now.html">Shop</a>
+    <a href="join.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="index.html">Home</a>
+</div>
+    </footer>
+    <script>
+        function showCategory(categoryId) {
+            const sections = document.querySelectorAll('.services');
+            sections.forEach(section =>section.style.display = 'none');
+            docment.getElementById(categoryId).style.display='flex'
+        }
+        function goToWhatsApp(itemName)
+        {
+            const message = encodeURIComponent('Hello Swidik Fashion237, I am interested in $ {itemName}');
+            const whatsappLink = 'https://chat.whatsapp.com/IlCtlrFLN4oGdoPn0nfOY8/237xxxxxxxxx?text=${message}';
+            window.open(whatsappLink,'_blank');
+        }
+    </script>
+</body>
+</html>
+          
